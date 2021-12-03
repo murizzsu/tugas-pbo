@@ -1,0 +1,39 @@
+<?php 
+
+    interface Buah{
+        public function makan();
+        public function setWarna($warna);
+    }
+
+    //contoh menambahkan 1 interface lagi akan diimplentasikan pada kelas apel
+    interface Benda{
+        public function Bentuk($bentuk);
+    }
+
+    class Jeruk implements Buah, Benda{ 
+
+        protected $warna;
+        protected $ukuran;
+        public function makan(){
+            $str = "Kupas kulitnya kemudian makan satu per satu ";
+            return $str;
+        }
+
+        public function setWarna($warna){
+            $warna = $this->warna=$warna;
+            return $warna;
+        }
+
+        public function Bentuk($bentuk){
+           $bentuk = $this->bentuk = $bentuk;
+           return $bentuk;
+        }
+    }
+
+    $jeruk = new Jeruk();
+    echo "Buah : Jeruk || Berwarna {$jeruk->setWarna('Kuning')} || Berbentuk {$jeruk->Bentuk('Bulat')}";
+    echo "<br>";
+    echo " Cara Makannya : {$jeruk->makan()}"
+
+  
+?>
