@@ -1,0 +1,38 @@
+<?php
+// buat abstract class
+abstract class boneka{
+   // buat abstract method
+   abstract public function nyalakan_boneka();
+}
+class barbie extends boneka{
+   public function nyalakan_boneka(){
+     return "boneka barbie hidup";
+   }
+} 
+class chucki extends boneka{
+   public function nyalakan_boneka(){
+     return "boneka chucki hidup";
+   }
+} 
+class anabelle extends boneka{
+public function nyalakan_boneka(){
+     return "boneka anabelle hidup";
+   }
+} 
+// buat objek dari class diatas
+$boneka_barbie = new barbie();
+$boneka_chucki = new chucki();
+$boneka_anabelle = new anabelle();
+  
+// buat fungsi untuk memproses objek
+function nyalakan_boneka($objek_boneka){
+   return $objek_boneka->nyalakan_boneka();
+}
+
+// jalankan fungsi
+echo nyalakan_boneka($boneka_barbie);
+echo "<hr>";
+echo nyalakan_boneka($boneka_chucki);
+echo "<hr>";
+echo nyalakan_boneka($boneka_anabelle);
+?>
