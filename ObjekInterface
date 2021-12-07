@@ -5,7 +5,6 @@
         public function setWarna($warna);
     }
 
-    //contoh menambahkan 1 interface lagi akan diimplentasikan pada kelas apel
     interface Benda{
         public function Bentuk($bentuk);
     }
