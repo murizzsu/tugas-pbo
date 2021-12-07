@@ -27,5 +27,5 @@ class Balok{
 $volume = new Balok(10,3,5);
 echo $volume->rumus();
 echo $volume->hitung();
-
+ 
 ?>
