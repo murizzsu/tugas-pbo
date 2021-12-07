@@ -28,11 +28,26 @@
            return $bentuk;
         }
     }
-
+    
+    class Mangga implements Buah{
+        protected $warna;
+        public function makan(){
+            $str = "Kupas kulitnya, pisahkan daging buah dan isinya kemudian makan";
+            return $str;
+        }
+       
+        public function setWarna($warna){
+            $this->warna=$warna;
+        }
+    }
+    
     $jeruk = new Jeruk();
     echo "Buah : Jeruk || Berwarna {$jeruk->setWarna('Kuning')} || Berbentuk {$jeruk->Bentuk('Bulat')}";
     echo "<br>";
-    echo " Cara Makannya : {$jeruk->makan()}"
+    echo " Cara Makannya : {$jeruk->makan()} <br>";
+    echo "<hr><br>";
 
-  
+  $mangga = new Mangga();
+  echo "Buah Mangga Berwarna {$jeruk->setWarna('Kulitnya hijau isinya oren')} <br>";
+  echo "Cara Makan Mangga yaitu {$jeruk->makan()} <br>";
 ?>
